@@ -1,0 +1,604 @@
+<rdf:RDF xmlns="https://www.who.int/health-topics/coronavirus" xmlns:pizza="https://www.who.int/health-topics/coronavirus" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:terms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="http://www.co-ode.org/ontologies/covid19/covid19.owl">
+
+<owl:Ontology rdf:about="http://www.co-ode.org/ontologies/covid19">
+<owl:versionIRI rdf:resource="http://www.co-ode.org/ontologies/covid19/2.0.0"/>
+<dc:title xml:lang="en">covid19</dc:title>
+<terms:contributor>Nisuli Hettiarachchi</terms:contributor>
+<terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">covid19</rdfs:label>
+<terms:provenance xml:lang="en">v2.0 Added new annotations to the ontology using standard/well-know annotation properties v1.5. Removed protege.owl import and references. Made ontology URI date-independent v1.4. Added other classes</terms:provenance>
+<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</owl:versionInfo>
+<terms:contributor>Alan Rector</terms:contributor>
+<dc:description xml:lang="en">An ontology about pizzas and their toppings. This is an example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial).</dc:description>
+<terms:contributor>Matthew Horridge</terms:contributor>
+<terms:contributor>Chris Wroe</terms:contributor>
+<terms:contributor>Robert Stevens</terms:contributor>
+</owl:Ontology>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <!--  http://purl.org/dc/elements/1.1/description  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+<!--  http://purl.org/dc/elements/1.1/title  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+<!--  http://purl.org/dc/terms/contributor  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+<!--  http://purl.org/dc/terms/license  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+<!--  http://purl.org/dc/terms/provenance  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+<!--  http://www.w3.org/2004/02/skos/core#altLabel  -->
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+<!--  http://www.w3.org/2004/02/skos/core#definition  -->
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+<!--  http://www.w3.org/2004/02/skos/core#prefLabel  -->
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+  -->
+<!--  Define the hasToFollow Property  -->
+<owl:ObjectProperty rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Pricotions"/>
+</owl:ObjectProperty>
+<!--  Define the mightBeInfected Property  -->
+<owl:ObjectProperty rdf:about="https://www.who.int/westernpacific/emergencies/covid-19/information/covid-19-variants">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19variants"/>
+</owl:ObjectProperty>
+<!--  Define the hasSymptomps Property  -->
+<owl:ObjectProperty rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Symptomps"/>
+</owl:ObjectProperty>
+<!--  Define the hasToGet Property  -->
+<owl:ObjectProperty rdf:about="https://www.unicef.org/coronavirus/what-you-need-to-know-covid-vaccine?gclid=CjwKCAiAnZCdBhBmEiwA8nDQxayIdblacE8-_442e12B1l-SG_5TY7cIXO9CBm3CvIiT2xasLn_imxoCoJMQAvD_BwE">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccines"/>
+</owl:ObjectProperty>
+<!--  Define the shouldTake Property  -->
+<owl:ObjectProperty rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/your-health/treatments-for-severe-illness.html">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Treatments"/>
+</owl:ObjectProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+
+
+<!--  OWL class definition - Patient  -->
+<owl:Class rdf:about="https://patient.info/coronavirus-covid-19">
+<rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Patient"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/health-topics/coronavirus"/>
+<owl:someValuesFrom rdf:resource="https://www.yalemedicine.org/news/covid-19-variants-of-concern-omicron"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/health-topics/coronavirus"/>
+<owl:someValuesFrom rdf:resource="https://www.bbc.com/news/health-55534727"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/health-topics/coronavirus"/>
+<owl:someValuesFrom rdf:resource="https://health.ucdavis.edu/coronavirus/covid-19-information/delta-variant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/health-topics/coronavirus"/>
+<owl:someValuesFrom rdf:resource="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+
+
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://my.clevelandclinic.org/health/symptoms/16708-loss-of-taste-and-smell"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms/main-symptoms/"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://ada.com/covid/covid-19-symptom-body-aches/"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+
+
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms."/>
+<owl:someValuesFrom rdf:resource="https://www.healthpartners.com/blog/how-long-does-fatigue-last-after-covid-19/#:~:text=How%20long%20does%20fatigue%20last,sluggish%20and%20tired%20for%20months."/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms."/>
+<owl:someValuesFrom rdf:resource="https://www2.hse.ie/conditions/covid19/recovery/breathlessness/"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+
+
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<owl:someValuesFrom rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks#:~:text=Masks%20should%20be%20used%20as,of%20protection%20against%20COVID%2D19."/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<owl:someValuesFrom rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/community/clean-disinfect/index.html"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<owl:someValuesFrom rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<owl:someValuesFrom rdf:resource="https://www.astrazeneca.com/covid-19.html"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<owl:someValuesFrom rdf:resource="https://sputnikvaccine.com/"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<owl:someValuesFrom rdf:resource="https://www.cdc.gov/vaccines/covid-19/info-by-product/moderna/index.html"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+
+
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/health-topics/coronavirus"/>
+<owl:onProperty rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:onProperty rdf:resource="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms."/>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<owl:onProperty rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/> 
+<owl:allValuesFrom>
+
+
+<owl:Class>
+<owl:unionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="https://www.yalemedicine.org/news/covid-19-variants-of-concern-omicron"/>
+<rdf:Description rdf:about="https://www.bbc.com/news/health-55534727"/>
+<rdf:Description rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/delta-variant"/>
+<rdf:Description rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant"/>
+
+<rdf:Description rdf:about="https://www.healthline.com/health/what-does-covid-headache-feel-like"/>
+<rdf:Description rdf:about="https://my.clevelandclinic.org/health/symptoms/16708-loss-of-taste-and-smell"/>
+<rdf:Description rdf:about="https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms/main-symptoms/"/>
+<rdf:Description rdf:about="https://ada.com/covid/covid-19-symptom-body-aches/"/>
+
+<rdf:Description rdf:about="https://www.healthpartners.com/blog/how-long-does-fatigue-last-after-covid-19/#:~:text=How%20long%20does%20fatigue%20last,sluggish%20and%20tired%20for%20months."/>
+<rdf:Description rdf:about="https://www2.hse.ie/conditions/covid19/recovery/breathlessness/"/>
+
+<rdf:Description rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks#:~:text=Masks%20should%20be%20used%20as,of%20protection%20against%20COVID%2D19."/>
+<rdf:Description rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/community/clean-disinfect/index.html"/>
+<rdf:Description rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+
+<rdf:Description rdf:about="https://www.astrazeneca.com/covid-19.html"/>
+<rdf:Description rdf:about="https://sputnikvaccine.com/"/>
+<rdf:Description rdf:about="https://www.cdc.gov/vaccines/covid-19/info-by-product/moderna/index.html"/>
+
+
+
+
+</owl:unionOf>
+</owl:Class>
+</owl:allValuesFrom>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Pricotions"/>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19variants"/>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Symptomps"/>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccines"/>
+<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Treatments"/>
+<owl:hasValue rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">covid19</rdfs:label>
+<rdfs:label xml:lang="pt">covid-19</rdfs:label>
+<skos:altLabel xml:lang="en">covid19</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 patient</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 Pricotions</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 variants</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 Symptomps</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 Vaccines</skos:altLabel>
+<skos:altLabel xml:lang="en">covid19 Treatments</skos:altLabel>
+<skos:prefLabel xml:lang="en">covid19</skos:prefLabel>
+</owl:Class>
+
+<!-- Didnt do lines 293 to 357-->
+<!--  owl subclass Variant - Alpha   -->
+<owl:Class rdf:about="https://www.yalemedicine.org/news/covid-19-variants-of-concern-omicron">
+<rdfs:subClassOf rdf:resource="https://www.who.int/activities/tracking-SARS-CoV-2-variants"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/activities/tracking-SARS-CoV-2-variants"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19varient"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Variant Alpha</rdfs:label>
+<rdfs:label xml:lang="pt">Alpha</rdfs:label>
+<skos:prefLabel xml:lang="en">Alpha</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Variant - Beta   -->
+<owl:Class rdf:about="https://www.bbc.com/news/health-55534727">
+<rdfs:subClassOf rdf:resource="https://www.who.int/activities/tracking-SARS-CoV-2-variants"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/activities/tracking-SARS-CoV-2-variants"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varients"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Variant Beta</rdfs:label>
+<rdfs:label xml:lang="pt">Beta</rdfs:label>
+<skos:prefLabel xml:lang="en">Beta</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Variant - Delta   -->
+<owl:Class rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/delta-variant">
+<rdfs:subClassOf rdf:resource="https://www.who.int/activities/tracking-SARS-CoV-2-variants"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/activities/tracking-SARS-CoV-2-variants"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varient"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Variant Delta</rdfs:label>
+<rdfs:label xml:lang="pt">Delta</rdfs:label>
+<skos:prefLabel xml:lang="en">Delta</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Variant - Omicron   -->
+<owl:Class rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant">
+<rdfs:subClassOf rdf:resource="https://www.who.int/activities/tracking-SARS-CoV-2-variants"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/activities/tracking-SARS-CoV-2-variants"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Varients"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Variant Omicron</rdfs:label>
+<rdfs:label xml:lang="pt">Omicron</rdfs:label>
+<skos:prefLabel xml:lang="en">Omicron</skos:prefLabel>
+</owl:Class>
+
+<!--  owl subclass Symptomps - Headache    -->
+<owl:Class rdf:about="https://www.healthline.com/health/what-does-covid-headache-feel-like">
+<rdfs:subClassOf rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19symptomps"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Symptom Headache</rdfs:label>
+<rdfs:label xml:lang="pt">Headache</rdfs:label>
+<skos:prefLabel xml:lang="en">Headache</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Symptomps - Anosmia/ aguesia   -->
+<owl:Class rdf:about="https://my.clevelandclinic.org/health/symptoms/16708-loss-of-taste-and-smell">
+<rdfs:subClassOf rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Symptomps"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Symptom Anosmia/ aguesia</rdfs:label>
+<rdfs:label xml:lang="pt">Anosmia/ aguesia</rdfs:label>
+<skos:prefLabel xml:lang="en">Anosmia/ aguesia</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Symptomps - Fever   -->
+<owl:Class rdf:about="https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms/main-symptoms/">
+<rdfs:subClassOf rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Symptom Fever</rdfs:label>
+<rdfs:label xml:lang="pt">Fever</rdfs:label>
+<skos:prefLabel xml:lang="en">Fever</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Symptomps - Body ache   -->
+<owl:Class rdf:about="https://ada.com/covid/covid-19-symptom-body-aches/">
+<rdfs:subClassOf rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Symptomps"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Symptom Body ache</rdfs:label>
+<rdfs:label xml:lang="pt">Body aches</rdfs:label>
+<skos:prefLabel xml:lang="en">Body aches</skos:prefLabel>
+</owl:Class>
+
+<!--Check this too -->
+<!--  owl subclass Post-symptoms - Fatigue  -->
+<owl:Class rdf:about="https://www.healthpartners.com/blog/how-long-does-fatigue-last-after-covid-19/#:~:text=How%20long%20does%20fatigue%20last,sluggish%20and%20tired%20for%20months.">
+<rdfs:subClassOf rdf:resource="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms."/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms."/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Post-symptoms"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Post-symptom - Fatigue</rdfs:label>
+<rdfs:label xml:lang="pt">Fatigue</rdfs:label>
+<skos:prefLabel xml:lang="en">Fatigue</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Post-symptoms - Shortness of breath   -->
+<owl:Class rdf:about="https://www2.hse.ie/conditions/covid19/recovery/breathlessness/">
+<rdfs:subClassOf rdf:resource="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms."/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms."/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Post-symptoms"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Post-symptom - Shortness of breath</rdfs:label>
+<rdfs:label xml:lang="pt">Shortness of breath</rdfs:label>
+<skos:prefLabel xml:lang="en">Shortness of breath</skos:prefLabel>
+</owl:Class>
+
+
+<!--  owl subclass Precaution - Use a mask   -->
+<owl:Class rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks#:~:text=Masks%20should%20be%20used%20as,of%20protection%20against%20COVID%2D19.">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19pricotion"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Precaution Use a mask</rdfs:label>
+<rdfs:label xml:lang="pt">Use a mask</rdfs:label>
+<skos:prefLabel xml:lang="en">Use a mask</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Precaution - Sanitization   -->
+<owl:Class rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/community/clean-disinfect/index.html">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19pricotion"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Precaution Sanitization</rdfs:label>
+<rdfs:label xml:lang="pt">Sanitization</rdfs:label>
+<skos:prefLabel xml:lang="en">Sanitization</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Precaution - Social distancing   -->
+<owl:Class rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.htmlE">
+<rdfs:subClassOf rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19pricotion"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Precaution Social distancing</rdfs:label>
+<rdfs:label xml:lang="pt">Social distancing</rdfs:label>
+<skos:prefLabel xml:lang="en">Social distancing</skos:prefLabel>
+</owl:Class>
+
+<!--  owl subclass Vaccines - Astra-zenica   -->
+<owl:Class rdf:about="https://www.astrazeneca.com/covid-19.html">
+<rdfs:subClassOf rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccines"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Vaccine Astra-zenica</rdfs:label>
+<rdfs:label xml:lang="pt">Astra-zenica</rdfs:label>
+<skos:prefLabel xml:lang="en">Astra-zenica</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Vaccines - Sputnic V    -->
+<owl:Class rdf:about="https://sputnikvaccine.com/">
+<rdfs:subClassOf rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccines"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Vaccine Sputnic V</rdfs:label>
+<rdfs:label xml:lang="pt">Sputnic V</rdfs:label>
+<skos:prefLabel xml:lang="en">Sputnic V</skos:prefLabel>
+</owl:Class>
+<!--  owl subclass Vaccines - Moderna   -->
+<owl:Class rdf:about="https://www.cdc.gov/vaccines/covid-19/info-by-product/moderna/index.html">
+<rdfs:subClassOf rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer"/>
+<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#covid19Vaccines"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:label xml:lang="en">Vaccine Moderna</rdfs:label>
+<rdfs:label xml:lang="pt">Moderna</rdfs:label>
+<skos:prefLabel xml:lang="en">Moderna</skos:prefLabel>
+</owl:Class>
+
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  Alpha is an individual(instance) of the Variants class  -->
+<owl:Thing rdf:about="https://www.who.int/westernpacific/emergencies/covid-19/information/covid-19-variants">
+<rdf:type rdf:resource="https://www.yalemedicine.org/news/covid-19-variants-of-concern-omicron"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Variants"/>
+</owl:Thing>      
+<!--  Beta is an individual(instance) of the Variants class  -->
+<owl:Thing rdf:about="https://www.who.int/westernpacific/emergencies/covid-19/information/covid-19-variants">
+<rdf:type rdf:resource="https://www.bbc.com/news/health-55534727"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Variants"/>
+</owl:Thing>
+<!--  Delta is an individual(instance) of the Variants class  -->
+<owl:Thing rdf:about="https://www.who.int/westernpacific/emergencies/covid-19/information/covid-19-variants">
+<rdf:type rdf:resource="https://health.ucdavis.edu/coronavirus/covid-19-information/delta-variant"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Variants"/>
+</owl:Thing>
+<!--  Omicron is an individual(instance) of the Variants class  -->
+<owl:Thing rdf:about="https://www.who.int/westernpacific/emergencies/covid-19/information/covid-19-variants">
+<rdf:type rdf:resource="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Variants"/>
+</owl:Thing>
+
+<!--  Headache is an individual(instance) of the Symptomps class  -->
+<owl:Thing rdf:about="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://www.healthline.com/health/what-does-covid-headache-feel-like"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptomps"/>
+</owl:Thing>
+<!--  Anosmia/ aguesia is an individual(instance) of the Symptomps class  -->
+<owl:Thing rdf:about="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://my.clevelandclinic.org/health/symptoms/16708-loss-of-taste-and-smell"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptomps"/>
+</owl:Thing>
+<!--  Fever is an individual(instance) of the Symptomps class  -->
+<owl:Thing rdf:about="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms/main-symptoms/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptomps"/>
+</owl:Thing>
+<!--  Body ache is an individual(instance) of the Symptomps class  -->
+<owl:Thing rdf:about="https://www.cadc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+<rdf:type rdf:resource="https://ada.com/covid/covid-19-symptom-body-aches/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Symptomps"/>
+</owl:Thing>
+
+<!--  Fatigue is an individual(instance) of the Post-symptomps class  -->
+<owl:Thing rdf:about="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms.">
+<rdf:type rdf:resource="https://www.healthpartners.com/blog/how-long-does-fatigue-last-after-covid-19/#:~:text=How%20long%20does%20fatigue%20last,sluggish%20and%20tired%20for%20months."/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Post-symptomps"/>
+</owl:Thing>
+<!--  Shortness of breath is an individual(instance) of the Post-symptomps class  -->
+<owl:Thing rdf:about="https://www.who.int/srilanka/news/detail/16-10-2021-post-covid-19-condition#:~:text=Symptoms%20reported%20after%20COVID%2D19%20infectiontext=Common%20symptoms%20include%20fatigue%2C%20shortness%20of%20breath%20and%20a%20decline,exhaustive%20list%20of%20reported%20symptoms.">
+<rdf:type rdf:resource="https://www2.hse.ie/conditions/covid19/recovery/breathlessness/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Post-symptomps"/>
+</owl:Thing>
+
+<!--  Use a mask is an individual(instance) of the Precautions class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+<rdf:type rdf:resource="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks#:~:text=Masks%20should%20be%20used%20as,of%20protection%20against%20COVID%2D19."/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid/covid19.owl#Precautions"/>
+</owl:Thing>
+<!--  Sanitization is an individual(instance) of the Precautions class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+<rdf:type rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/community/clean-disinfect/index.html"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid/covid19.owl#Precautions"/>
+</owl:Thing>
+<!--  Social distancing is an individual(instance) of the Precautions class  -->
+<owl:Thing rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+<rdf:type rdf:resource="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid/covid19.owl#Precautions"/>
+</owl:Thing>
+
+<!--  Astra-zeneca is an individual(instance) of the Vaccines class  -->
+<owl:Thing rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer">
+<rdf:type rdf:resource="https://www.astrazeneca.com/covid-19.html"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Vaccines"/>
+</owl:Thing>
+<!--  Sputnic V is an individual(instance) of the Vaccines class  -->
+<owl:Thing rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer">
+<rdf:type rdf:resource="https://sputnikvaccine.com/"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Vaccines"/>
+</owl:Thing>
+<!--  Moderna is an individual(instance) of the Vaccines class  -->
+<owl:Thing rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccinesPfizer">
+<rdf:type rdf:resource="https://www.cdc.gov/vaccines/covid-19/info-by-product/moderna/index.html"/>
+<rdf:type rdf:resource="http://www.co-ode.org/ontologies/covid19/covid19.owl#Vaccines"/>
+</owl:Thing>
+
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+
+<!--Not sure about these- check them -->      
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="https://www.yalemedicine.org/news/covid-19-variants-of-concern-omicron"/>
+<rdf:Description rdf:about="https://www.bbc.com/news/health-55534727"/>
+<rdf:Description rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/delta-variant"/>
+<rdf:Description rdf:about="https://health.ucdavis.edu/coronavirus/covid-19-information/omicron-variant"/>
+
+<rdf:Description rdf:about="https://www.healthline.com/health/what-does-covid-headache-feel-like"/>
+<rdf:Description rdf:about="https://my.clevelandclinic.org/health/symptoms/16708-loss-of-taste-and-smell"/>
+<rdf:Description rdf:about="https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms/main-symptoms/"/>
+<rdf:Description rdf:about="https://ada.com/covid/covid-19-symptom-body-aches/"/>
+
+<rdf:Description rdf:about="https://www.healthpartners.com/blog/how-long-does-fatigue-last-after-covid-19/#:~:text=How%20long%20does%20fatigue%20last,sluggish%20and%20tired%20for%20months."/>
+<rdf:Description rdf:about="https://www2.hse.ie/conditions/covid19/recovery/breathlessness/"/>
+
+<rdf:Description rdf:about="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks#:~:text=Masks%20should%20be%20used%20as,of%20protection%20against%20COVID%2D19."/>
+<rdf:Description rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/community/clean-disinfect/index.html"/>
+<rdf:Description rdf:about="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"/>
+
+<rdf:Description rdf:about="https://www.astrazeneca.com/covid-19.html"/>
+<rdf:Description rdf:about="https://sputnikvaccine.com/"/>
+<rdf:Description rdf:about="https://www.cdc.gov/vaccines/covid-19/info-by-product/moderna/index.html"/>
+</owl:members>
+</rdf:Description>
+</rdf:RDF>
